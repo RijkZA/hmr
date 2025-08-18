@@ -1,11 +1,179 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Small Business Site</title>
+  <style>
+    /* Reset margins/padding */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* Fixed Header */
+    header {
+      position: fixed;
+      width: 100%;
+      background: #333;
+      color: #fff;
+      padding: 1rem 0;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    header nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Spacer so content doesn't hide behind fixed header */
+    body::before {
+      content: "";
+      display: block;
+      height: 40px; /* adjust to match header height */
+    }
+
+    /* Sections */
+    section {
+      padding: 100px 20px 160px; /* top | sides | bottom */
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    /* Company name + description in Home */
+    .company-name {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    .hero-placeholder {
+      width: 200px;
+      height: 200px;
+      background-color: green;
+      margin: 0 auto 20px; /* centers + spacing */
+      border-radius: 10px; /* square with soft corners */
+    }
+
+    .company-description {
+      font-size: 1.2rem;
+      color: #555;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* About Section with headshot placeholder */
+    .headshot-placeholder {
+      width: 150px;
+      height: 150px;
+      background-color: green;
+      border-radius: 50%; /* circle */
+      margin: 20px auto;
+    }
+
+    /* Services list */
+    .services-list {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .service-item {
+      background: #f4f4f4;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+    }
+
+    /* Contact link */
+    .contact-link {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .contact-link:hover {
+      background: #555;
+    }
+  </style>
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <p>This site is reserved for Half Moon Rising.</p>
+
+  <!-- Header -->
+  <header>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Observations</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Home -->
+  <section id="home">
+    <div class="container">
+      <h1 class="company-name">Half Moon Rising</h1>
+  
+      <p class="company-description">
+        What happens when you take the time, over a period of time, to observe with purpose?
+      </p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <img src="images/1664610069440.jpg" alt="Headshot" class="headshot-img">
+      <p>
+        Founded by Wouter de Wit - off the back of 20 years of working at the intersection of Strategy and Operations - Half Moon Rising was established to serve the growing needs within organisations in navigating the complexities of succession planning and its implementation. Having completed his MBA with a specialization in Entrepreneurship at the UCT Graduate School of Business and with research focussed on "Co-creating Impactful Succession Plans", Wouter is leveraging his Strategic, Ideation, and Adaptability strengths to discovers ways to unlock untapped potential in every business or organisation that is prepared to take the time to observe with purpose.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="container">
+      <h2>Can you relate?</h2>
+      <div class="services-list">
+        <div class="service-item">At the heart of the succession challenge lies the felt risk that others will not meet the standards I expect if I am not there to ensure excellence.</div>
+        <div class="service-item">My business should be worth more before I am ready to entertain selling what I have worked so hard building and which still gets me up in the morning.</div>
+        <div class="service-item">I have tried to take my business/organisation to the next level, but cannot build or retain the capacity in my team to stay on top of the growing complexity.</div>
+        <div class="service-item">I have been doing this for 30 years! How can someone with no knowledge of how my business works help with the things that keep causing me frustration.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>
+        If you need a fresh set of eyes on what your business or organisation needs to grow and avoid stagnation, or you realize that you need to explore unique and alternative strategies to succession, then get it touch.
+      </p>
+      <a href="https://www.linkedin.com/in/wouter-de-wit-za" target="_blank" class="contact-link">
+        Connect on LinkedIn
+      </a>
+    </div>
+  </section>
+
 </body>
 </html>
