@@ -75,14 +75,15 @@
     }
 
     /* About Section with headshot placeholder */
-    .headshot-placeholder {
-      width: 150px;
-      height: 150px;
-      background-color: green;
-      border-radius: 50%; /* circle */
-      margin: 20px auto;
+    .headshot-img {
+      width: 200px;       /* adjust size as needed */
+      height: 200px;      /* same as width to keep it square */
+      border-radius: 50%; /* makes it round */
+      object-fit: cover;  /* crops to fill the circle */
+      display: block;
+      margin: 20px auto;  /* centers the image */
     }
-
+    
     /* Services list */
     .services-list {
       display: flex;
